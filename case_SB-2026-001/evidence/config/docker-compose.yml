@@ -1,0 +1,100 @@
+services:
+  # Vulnerable Banking Application
+  vulnerable-app:
+    build: ./vulnerable-app
+    container_name: securebank-app
+    ports:
+      - "8080:5000"
+    volumes:
+      - ./vulnerable-app:/app
+      - ./evidence:/app/evidence
+    networks:
+      - securebank-net
+    environment:
+      - FLASK_ENV=development
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=password
+      - MYSQL_DB=securebank
+
+  # MySQL Database
+  mysql:
+    image: mysql:8.0
+    container_name: securebank-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=securebank
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=password
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./vulnerable-app/db_init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - securebank-net
+
+  # Kali Tools Container (Attack & Forensics)
+  kali-tools:
+    build: ./kali-tools
+    container_name: kali-attacker
+    volumes:
+      - ./kali-tools/scripts:/scripts
+      - ./evidence:/evidence
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - securebank-net
+    privileged: true
+    depends_on:
+      - vulnerable-app
+      - elasticsearch
+      - logstash
+      - kibana
+
+  # ELK Stack for Log Analysis
+  elasticsearch:
+    image: elasticsearch:7.17.9
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - securebank-net
+
+  logstash:
+    image: logstash:7.17.9
+    container_name: logstash
+    volumes:
+      - ./elk-stack/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./evidence/logs:/logs
+    ports:
+      - "5000:5000"
+      - "5000:5000/udp"
+    environment:
+      - XPACK_MONITORING_ENABLED=false
+    networks:
+      - securebank-net
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: kibana:7.17.9
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    networks:
+      - securebank-net
+    depends_on:
+      - elasticsearch
+
+networks:
+  securebank-net:
+    driver: bridge
+
+volumes:
+  mysql-data:
+  elasticsearch-data:

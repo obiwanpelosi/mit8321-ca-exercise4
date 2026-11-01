@@ -1,0 +1,20 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:22Z | By: Feyi Abioye | Host: securebank-lab
+# Source: VM host
+# Command: bash -c date -u; echo; hostname; uname -a; echo; uptime; echo; timedatectl 2>/dev/null; echo; docker version --format "Docker server {{.Server.Version}}"
+
+Sun Nov  1 14:20:22 UTC 2026
+
+securebank-lab
+Linux securebank-lab 5.15.0-198-generic #208-Ubuntu SMP Fri Sep 4 10:23:39 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+
+ 15:20:22 up  1:28,  1 user,  load average: 1.15, 1.27, 1.27
+
+               Local time: Sun 2026-11-01 15:20:22 WAT
+           Universal time: Sun 2026-11-01 14:20:22 UTC
+                 RTC time: Sun 2026-11-01 14:20:23
+                Time zone: Africa/Lagos (WAT, +0100)
+System clock synchronized: yes
+              NTP service: active
+          RTC in local TZ: no
+
+Docker server 29.1.3

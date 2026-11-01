@@ -1,0 +1,42 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:26Z | By: Feyi Abioye | Host: securebank-lab
+# Source: Lab repository
+# Command: bash -c cd '/home/ubuntu/secure-cyber-fortress' && git log -1 --format='Commit %H (%ci)' && echo && git status --short && git diff -- docker-compose.yml vulnerable-app && echo && grep -nE 'debug=True|secret_key|PASSWORD|password' docker-compose.yml vulnerable-app/app.py vulnerable-app/db_init.sql
+
+Commit 03870ad162be746ea99243c2da6be3e49034dd4e (2026-02-18 02:51:36 -0500)
+
+ M docker-compose.yml
+ M evidence/attack_timeline.txt
+ D evidence/disk_usage.txt
+ D evidence/hashes.txt
+ D evidence/log_files.txt
+ D evidence/network_connections.txt
+ D evidence/network_interfaces.txt
+ D evidence/running_processes.txt
+ M evidence/securebank.log
+ D evidence/suid_binaries.txt
+?? sample_evidence_from_repo/
+diff --git a/docker-compose.yml b/docker-compose.yml
+index f615c9e..ba7e8b4 100644
+--- a/docker-compose.yml
++++ b/docker-compose.yml
+@@ -19,7 +19,7 @@ services:
+ 
+   # MySQL Database
+   mysql:
+-    image: mysql:5.7
++    image: mysql:8.0
+     container_name: securebank-mysql
+     environment:
+       - MYSQL_ROOT_PASSWORD=root
+
+docker-compose.yml:17:      - MYSQL_PASSWORD=password
+docker-compose.yml:25:      - MYSQL_ROOT_PASSWORD=root
+docker-compose.yml:28:      - MYSQL_PASSWORD=password
+vulnerable-app/app.py:8:app.secret_key = 'insecure_secret_key_123'
+vulnerable-app/app.py:22:        password=os.getenv('MYSQL_PASSWORD', 'password'),
+vulnerable-app/app.py:33:    password = request.form.get('password', '')
+vulnerable-app/app.py:36:    query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
+vulnerable-app/app.py:117:    app.run(host='0.0.0.0', port=5000, debug=True)  # debug=True is also a vulnerability
+vulnerable-app/db_init.sql:7:    password VARCHAR(50) NOT NULL,
+vulnerable-app/db_init.sql:11:INSERT INTO users (username, password, email) VALUES
+vulnerable-app/db_init.sql:13:('john', 'password123', 'john@securebank.com'),

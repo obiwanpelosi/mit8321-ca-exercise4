@@ -1,0 +1,11 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:23Z | By: Feyi Abioye | Host: securebank-lab
+# Source: Docker engine
+# Command: docker ps -a --format table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}
+
+NAMES              IMAGE                                  STATUS             PORTS
+kali-attacker      secure-cyber-fortress-kali-tools       Up About an hour   
+kibana             kibana:7.17.9                          Up About an hour   0.0.0.0:5601->5601/tcp, [::]:5601->5601/tcp
+logstash           logstash:7.17.9                        Up About an hour   5044/tcp, 0.0.0.0:5000->5000/tcp, 0.0.0.0:5000->5000/udp, [::]:5000->5000/tcp, [::]:5000->5000/udp, 9600/tcp
+securebank-mysql   mysql:8.0                              Up About an hour   3306/tcp, 33060/tcp
+securebank-app     secure-cyber-fortress-vulnerable-app   Up About an hour   0.0.0.0:8080->5000/tcp, [::]:8080->5000/tcp
+elasticsearch      elasticsearch:7.17.9                   Up About an hour   0.0.0.0:9200->9200/tcp, [::]:9200->9200/tcp, 9300/tcp

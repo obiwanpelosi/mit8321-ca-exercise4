@@ -1,0 +1,5 @@
+Entry,Date_UTC,Item,Action,From,To,Handled_by,Purpose,Hash_status
+1,2026-11-01T14:20:22Z,EV-01 to EV-24,Collected,securebank-lab VM and lab containers,/home/ubuntu/case_SB-2026-001/evidence,Feyi Abioye,Evidence acquisition,SHA-256 and MD5 recorded in hashes.txt
+2,2026-11-01T14:20:26Z,SB-2026-001_evidence.tar.gz,Sealed read-only and archived,/home/ubuntu/case_SB-2026-001/evidence,/home/ubuntu/case_SB-2026-001,Feyi Abioye,Preservation,Archive SHA-256 8cc882af5a645e59bf74df40592f8c0ad4eaa84d7c114f5a0f7e4e229a1a72a5
+3,2026-11-01T14:21:56Z,EV-01 to EV-24,Integrity verified,/home/ubuntu/case_SB-2026-001,/home/ubuntu/case_SB-2026-001,Feyi Abioye,Verification,All SHA-256 hashes OK
+4,2026-11-01T14:38:30Z,Case package SB-2026-001,Transferred by multipass transfer,securebank-lab VM,Mac ~/Downloads/8321,Feyi Abioye,Analysis and reporting,Package hash matched; all evidence SHA-256 OK on Mac

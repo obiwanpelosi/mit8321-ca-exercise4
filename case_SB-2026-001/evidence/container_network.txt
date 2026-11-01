@@ -1,0 +1,94 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:23Z | By: Feyi Abioye | Host: securebank-lab
+# Source: Docker engine
+# Command: bash -c docker network inspect $(docker network ls -q --filter name=securebank-net)
+
+[
+    {
+        "Name": "secure-cyber-fortress_securebank-net",
+        "Id": "16312836fd4cc1807abe97e5263976356d0b1e05bdc36394a02824226ca76b73",
+        "Created": "2026-11-01T14:13:43.529418042+01:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "IPRange": "",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.config-hash": "7cf9a8746405c88294dfbe438eae2881e361485141ad91fff46370c7e8ab8eb5",
+            "com.docker.compose.network": "securebank-net",
+            "com.docker.compose.project": "secure-cyber-fortress",
+            "com.docker.compose.version": "2.40.3"
+        },
+        "Containers": {
+            "412e9965a0fe6ed4fed9b7b668a5fff7736558a0481e1f1e4c6f87a473eb1401": {
+                "Name": "kali-attacker",
+                "EndpointID": "6435751814c5f4f08c9803ce6adc1ebc7ea0ad1382677263070dfe236641b7c6",
+                "MacAddress": "ee:63:4d:06:94:9b",
+                "IPv4Address": "172.18.0.7/16",
+                "IPv6Address": ""
+            },
+            "50cdbbd042c8123ab5501fe1eb1a5afb17dc4e9b958bf2839b1ef0ac902b9aac": {
+                "Name": "elasticsearch",
+                "EndpointID": "2bca2f28e61f98a08800d9ad80f51a2aac18507c389b0d24e5eed44d0505ea0e",
+                "MacAddress": "4e:bd:46:65:b2:92",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            },
+            "639b9acff1c22c4c4b60b3a406d1fe05d8d53fed7e4e84a9ee9997066661077b": {
+                "Name": "securebank-mysql",
+                "EndpointID": "46d95cb3a7b3fe32da58911bdd26a1d371aa4a694571ab314ff2d97bec3b942b",
+                "MacAddress": "5e:57:b1:16:52:b1",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            },
+            "6495a906ae459ee196733139d8f18029e0dcafcbd882e0660e44241f0ebf29b5": {
+                "Name": "kibana",
+                "EndpointID": "51c7c34f71045f814306eed604b9406efc4173e6bc5d21c3adf89a68b097ee4b",
+                "MacAddress": "92:46:ae:64:a5:67",
+                "IPv4Address": "172.18.0.5/16",
+                "IPv6Address": ""
+            },
+            "cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c": {
+                "Name": "securebank-app",
+                "EndpointID": "82a808e3200301df7ebb2f2c7e843f5cf125f17bee3e0af3800dab567bac8b9a",
+                "MacAddress": "1a:13:3f:d0:7e:16",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "fb0a1d81652bea9f97e53a3e5716ac1dd9d7eb556daa8d4bb40fb60acecde4f5": {
+                "Name": "logstash",
+                "EndpointID": "b2d81fb7f94b867855d837a52f3d6e8ed3eb5f86c2746e159e2f72074d2c194c",
+                "MacAddress": "ce:8b:e5:e0:6b:36",
+                "IPv4Address": "172.18.0.6/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.18.0.0/16": {
+                        "IPsInUse": 9,
+                        "DynamicIPsAvailable": 65527
+                    }
+                }
+            }
+        }
+    }
+]

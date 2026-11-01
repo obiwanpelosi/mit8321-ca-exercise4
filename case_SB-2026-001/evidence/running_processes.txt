@@ -1,0 +1,134 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:23Z | By: Feyi Abioye | Host: securebank-lab
+# Source: VM host
+# Command: ps auxww --sort=start_time
+
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 102420 11236 ?        Ss   13:51   0:01 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    13:51   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   13:51   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   13:51   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   13:51   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   13:51   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   13:51   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I<   13:51   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        S    13:51   0:00 [rcu_tasks_rude_]
+root          12  0.0  0.0      0     0 ?        S    13:51   0:00 [rcu_tasks_trace]
+root          13  0.0  0.0      0     0 ?        S    13:51   0:05 [ksoftirqd/0]
+root          14  0.0  0.0      0     0 ?        I    13:51   0:02 [rcu_sched]
+root          15  0.0  0.0      0     0 ?        S    13:51   0:00 [migration/0]
+root          16  0.0  0.0      0     0 ?        S    13:51   0:00 [idle_inject/0]
+root          18  0.0  0.0      0     0 ?        S    13:51   0:00 [cpuhp/0]
+root          19  0.0  0.0      0     0 ?        S    13:51   0:00 [cpuhp/1]
+root          20  0.0  0.0      0     0 ?        S    13:51   0:00 [idle_inject/1]
+root          21  0.0  0.0      0     0 ?        S    13:51   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    13:51   0:05 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   13:51   0:00 [kworker/1:0H-events_highpri]
+root          25  0.0  0.0      0     0 ?        S    13:51   0:00 [kdevtmpfs]
+root          26  0.0  0.0      0     0 ?        I<   13:51   0:00 [inet_frag_wq]
+root          27  0.0  0.0      0     0 ?        I    13:51   0:00 [kworker/1:1-events]
+root          28  0.0  0.0      0     0 ?        S    13:51   0:00 [kauditd]
+root          29  0.0  0.0      0     0 ?        S    13:51   0:00 [khungtaskd]
+root          30  0.0  0.0      0     0 ?        S    13:51   0:00 [oom_reaper]
+root          31  0.0  0.0      0     0 ?        I<   13:51   0:00 [writeback]
+root          32  0.0  0.0      0     0 ?        S    13:51   0:00 [kcompactd0]
+root          33  0.0  0.0      0     0 ?        SN   13:51   0:00 [ksmd]
+root          34  0.0  0.0      0     0 ?        SN   13:51   0:00 [khugepaged]
+root          80  0.0  0.0      0     0 ?        I<   13:51   0:00 [kintegrityd]
+root          81  0.0  0.0      0     0 ?        I<   13:51   0:00 [kblockd]
+root          82  0.0  0.0      0     0 ?        I<   13:51   0:00 [blkcg_punt_bio]
+root          83  0.0  0.0      0     0 ?        I<   13:51   0:00 [tpm_dev_wq]
+root          84  0.0  0.0      0     0 ?        I<   13:51   0:00 [ata_sff]
+root          85  0.0  0.0      0     0 ?        I<   13:51   0:00 [md]
+root          86  0.0  0.0      0     0 ?        I<   13:51   0:00 [edac-poller]
+root          87  0.0  0.0      0     0 ?        I<   13:51   0:00 [devfreq_wq]
+root          88  0.0  0.0      0     0 ?        S    13:51   0:00 [watchdogd]
+root          90  0.0  0.0      0     0 ?        I<   13:51   0:00 [kworker/1:1H-kblockd]
+root          91  0.0  0.0      0     0 ?        S    13:51   0:00 [kswapd0]
+root          92  0.0  0.0      0     0 ?        S    13:51   0:00 [ecryptfs-kthrea]
+root          94  0.0  0.0      0     0 ?        I<   13:51   0:00 [kthrotld]
+root          95  0.0  0.0      0     0 ?        S    13:51   0:00 [irq/49-ACPI:Ged]
+root          96  0.0  0.0      0     0 ?        I<   13:51   0:00 [acpi_thermal_pm]
+root          98  0.0  0.0      0     0 ?        I<   13:51   0:00 [mld]
+root          99  0.0  0.0      0     0 ?        I<   13:51   0:00 [ipv6_addrconf]
+root         108  0.0  0.0      0     0 ?        I<   13:51   0:00 [kstrp]
+root         111  0.0  0.0      0     0 ?        I<   13:51   0:00 [zswap-shrink]
+root         112  0.0  0.0      0     0 ?        I<   13:51   0:00 [kworker/u5:0]
+root         116  0.0  0.0      0     0 ?        I<   13:51   0:00 [cryptd]
+root         154  0.0  0.0      0     0 ?        I<   13:51   0:00 [charger_manager]
+root         178  0.0  0.0      0     0 ?        I<   13:51   0:00 [kworker/0:1H-kblockd]
+root         202  0.0  0.0      0     0 ?        S    13:51   0:00 [scsi_eh_0]
+root         203  0.0  0.0      0     0 ?        I<   13:51   0:00 [scsi_tmf_0]
+root         279  0.0  0.0      0     0 ?        I<   13:51   0:00 [raid5wq]
+root         323  0.0  0.0      0     0 ?        S    13:51   0:01 [jbd2/sda1-8]
+root         324  0.0  0.0      0     0 ?        I<   13:51   0:00 [ext4-rsv-conver]
+root         399  0.0  0.1  48328 10252 ?        S<s  13:51   0:00 /lib/systemd/systemd-journald
+root         430  0.0  0.0      0     0 ?        I<   13:51   0:00 [kaluad]
+root         432  0.0  0.0      0     0 ?        I<   13:51   0:00 [kmpath_rdacd]
+root         437  0.0  0.0      0     0 ?        I<   13:51   0:00 [kmpathd]
+root         438  0.0  0.0      0     0 ?        I<   13:51   0:00 [kmpath_handlerd]
+root         439  0.0  0.3 289916 25732 ?        SLsl 13:51   0:01 /sbin/multipathd -d -s
+root         441  0.0  0.0  22552  5896 ?        Ss   13:51   0:00 /lib/systemd/systemd-udevd
+systemd+     538  0.0  0.0  88832  6508 ?        Ssl  13:51   0:00 /lib/systemd/systemd-timesyncd
+root         543  0.0  0.0      0     0 ?        I    13:51   0:00 [kworker/0:4-events]
+systemd+     582  0.0  0.0  16572  7876 ?        Ss   13:51   0:00 /lib/systemd/systemd-networkd
+systemd+     584  0.0  0.1  25536 12476 ?        Ss   13:51   0:00 /lib/systemd/systemd-resolved
+root         708  0.0  0.0   6932  2392 ?        Ss   13:51   0:00 /usr/sbin/cron -f -P
+message+     709  0.0  0.0   9292  4224 ?        Ss   13:51   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         715  0.0  0.0  82144  1908 ?        Ssl  13:51   0:00 /usr/sbin/irqbalance --foreground
+root         716  0.0  0.2  32980 17788 ?        Ss   13:51   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog       719  0.0  0.0 222072  4200 ?        Ssl  13:51   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         721  0.0  0.4 1926520 38644 ?       Ssl  13:51   0:01 /snap/snapd/current/usr/lib/snapd/snapd
+root         723  0.0  0.0  15936  7132 ?        Ss   13:51   0:00 /lib/systemd/systemd-logind
+root         733  0.0  0.0   5656   800 ?        Ss+  13:51   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 ttyAMA0 vt220
+root         745  0.0  0.0   5612   808 tty1     Ss+  13:51   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         771  0.0  0.2 110016 19924 ?        Ssl  13:51   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         821  0.0  0.0  15320  7880 ?        Ss   13:51   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         944  0.0  0.1  18296  8696 ?        Ss   13:51   0:00 sshd: ubuntu [priv]
+ubuntu       982  0.0  0.1  17428  9028 ?        Ss   13:51   0:00 /lib/systemd/systemd --user
+ubuntu       985  0.0  0.0 106340  5484 ?        S    13:51   0:00 (sd-pam)
+ubuntu      1249  0.0  0.0  18592  6328 ?        S    13:51   0:00 sshd: ubuntu@notty
+root        1825  0.0  0.2 297728 17512 ?        Ssl  13:52   0:00 /usr/libexec/packagekitd
+root        1829  0.0  0.0 234408  6568 ?        Ssl  13:52   0:00 /usr/libexec/polkitd --no-debug
+root        2587  2.8  0.7 2237908 57472 ?       Ssl  13:53   2:28 /usr/bin/containerd
+root        2889  1.7  1.1 2588496 97088 ?       Ssl  13:53   1:28 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root        8743  0.0  0.1 1233248 10156 ?       Sl   14:13   0:01 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 50cdbbd042c8123ab5501fe1eb1a5afb17dc4e9b958bf2839b1ef0ac902b9aac -address /run/containerd/containerd.sock
+root        8754  0.0  0.1 1233504 9684 ?        Sl   14:13   0:01 /usr/bin/containerd-shim-runc-v2 -namespace moby -id cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c -address /run/containerd/containerd.sock
+root        8788  0.0  0.1 1233248 9720 ?        Sl   14:13   0:01 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 639b9acff1c22c4c4b60b3a406d1fe05d8d53fed7e4e84a9ee9997066661077b -address /run/containerd/containerd.sock
+root        8823  0.0  0.4  53412 35028 ?        Ss   14:13   0:00 python app.py
+root        8824  0.0  0.0   1936   428 ?        Ss   14:13   0:00 /bin/tini -- /usr/local/bin/docker-entrypoint.sh eswrapper
+fwupd-r+    8858  0.6  4.9 1742000 399816 ?      Ssl  14:13   0:27 mysqld
+root        8908  0.0  0.0 1744852 3296 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 9200 -container-ip 172.18.0.3 -container-port 9200 -use-listen-fd
+root        8914  0.0  0.0 1744852 3300 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 9200 -container-ip 172.18.0.3 -container-port 9200 -use-listen-fd
+ubuntu      8941  5.0 11.0 3254296 893064 ?      Sl   14:13   3:21 /usr/share/elasticsearch/jdk/bin/java -Xshare:auto -Des.networkaddress.cache.ttl=60 -Des.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djna.nosys=true -XX:-OmitStackTraceInFastThrow -XX:+ShowCodeDetailsInExceptionMessages -Dio.netty.noUnsafe=true -Dio.netty.noKeySetOptimization=true -Dio.netty.recycler.maxCapacityPerThread=0 -Dio.netty.allocator.numDirectArenas=0 -Dlog4j.shutdownHookEnabled=false -Dlog4j2.disable.jmx=true -Dlog4j2.formatMsgNoLookups=true -Djava.locale.providers=SPI,COMPAT --add-opens=java.base/java.io=ALL-UNNAMED -Djava.security.manager=allow -XX:+UseG1GC -Djava.io.tmpdir=/tmp/elasticsearch-17148632548525909151 -XX:+HeapDumpOnOutOfMemoryError -XX:+ExitOnOutOfMemoryError -XX:HeapDumpPath=data -XX:ErrorFile=logs/hs_err_pid%p.log -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m -Des.cgroups.hierarchy.override=/ -Xms512m -Xmx512m -XX:MaxDirectMemorySize=268435456 -XX:G1HeapRegionSize=4m -XX:InitiatingHeapOccupancyPercent=30 -XX:G1ReservePercent=15 -Des.path.home=/usr/share/elasticsearch -Des.path.conf=/usr/share/elasticsearch/config -Des.distribution.flavor=default -Des.distribution.type=docker -Des.bundled_jdk=true -cp /usr/share/elasticsearch/lib/* org.elasticsearch.bootstrap.Elasticsearch -Ediscovery.type=single-node
+root        8946  0.0  0.0 1597268 3404 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8080 -container-ip 172.18.0.2 -container-port 5000 -use-listen-fd
+root        8952  0.0  0.0 1671060 3360 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 8080 -container-ip 172.18.0.2 -container-port 5000 -use-listen-fd
+root        8984  0.0  0.1 1233248 9908 ?        Sl   14:13   0:01 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 6495a906ae459ee196733139d8f18029e0dcafcbd882e0660e44241f0ebf29b5 -address /run/containerd/containerd.sock
+root        8986  0.0  0.1 1233248 10216 ?       Sl   14:13   0:01 /usr/bin/containerd-shim-runc-v2 -namespace moby -id fb0a1d81652bea9f97e53a3e5716ac1dd9d7eb556daa8d4bb40fb60acecde4f5 -address /run/containerd/containerd.sock
+ubuntu      9026  0.0  0.0   1936   436 ?        Ss   14:13   0:00 /bin/tini -- /usr/local/bin/kibana-docker
+ubuntu      9049  3.1  7.6 3718152 619412 ?      Ssl  14:13   2:07 /usr/share/logstash/jdk/bin/java -Xms1g -Xmx1g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djdk.io.File.enableADS=true -Djruby.compile.invokedynamic=true -Djruby.jit.threshold=0 -Djruby.regexp.interruptible=true -XX:+HeapDumpOnOutOfMemoryError -Djava.security.egd=file:/dev/urandom -Dlog4j2.isThreadContextMapInheritable=true -Dls.cgroup.cpuacct.path.override=/ -Dls.cgroup.cpu.path.override=/ -cp /usr/share/logstash/logstash-core/lib/jars/animal-sniffer-annotations-1.14.jar:/usr/share/logstash/logstash-core/lib/jars/checker-compat-qual-2.0.0.jar:/usr/share/logstash/logstash-core/lib/jars/commons-codec-1.14.jar:/usr/share/logstash/logstash-core/lib/jars/commons-compiler-3.1.0.jar:/usr/share/logstash/logstash-core/lib/jars/commons-logging-1.2.jar:/usr/share/logstash/logstash-core/lib/jars/error_prone_annotations-2.1.3.jar:/usr/share/logstash/logstash-core/lib/jars/google-java-format-1.1.jar:/usr/share/logstash/logstash-core/lib/jars/guava-24.1.1-jre.jar:/usr/share/logstash/logstash-core/lib/jars/j2objc-annotations-1.1.jar:/usr/share/logstash/logstash-core/lib/jars/jackson-annotations-2.9.10.jar:/usr/share/logstash/logstash-core/lib/jars/jackson-core-2.9.10.jar:/usr/share/logstash/logstash-core/lib/jars/jackson-databind-2.9.10.8.jar:/usr/share/logstash/logstash-core/lib/jars/jackson-dataformat-cbor-2.9.10.jar:/usr/share/logstash/logstash-core/lib/jars/jackson-dataformat-yaml-2.9.10.jar:/usr/share/logstash/logstash-core/lib/jars/janino-3.1.0.jar:/usr/share/logstash/logstash-core/lib/jars/javassist-3.26.0-GA.jar:/usr/share/logstash/logstash-core/lib/jars/jruby-complete-9.2.20.1.jar:/usr/share/logstash/logstash-core/lib/jars/jsr305-1.3.9.jar:/usr/share/logstash/logstash-core/lib/jars/log4j-1.2-api-2.17.1.jar:/usr/share/logstash/logstash-core/lib/jars/log4j-api-2.17.1.jar:/usr/share/logstash/logstash-core/lib/jars/log4j-core-2.17.1.jar:/usr/share/logstash/logstash-core/lib/jars/log4j-jcl-2.17.1.jar:/usr/share/logstash/logstash-core/lib/jars/log4j-slf4j-impl-2.17.1.jar:/usr/share/logstash/logstash-core/lib/jars/logstash-core.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.commands-3.6.0.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.contenttype-3.4.100.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.expressions-3.4.300.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.filesystem-1.3.100.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.jobs-3.5.100.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.resources-3.7.100.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.core.runtime-3.7.0.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.equinox.app-1.3.100.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.equinox.common-3.6.0.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.equinox.preferences-3.4.1.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.equinox.registry-3.5.101.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.jdt.core-3.10.0.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.osgi-3.7.1.jar:/usr/share/logstash/logstash-core/lib/jars/org.eclipse.text-3.5.101.jar:/usr/share/logstash/logstash-core/lib/jars/reflections-0.9.11.jar:/usr/share/logstash/logstash-core/lib/jars/slf4j-api-1.7.30.jar:/usr/share/logstash/logstash-core/lib/jars/snakeyaml-1.23.jar org.logstash.Logstash
+root        9120  0.0  0.0 1671060 3344 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5601 -container-ip 172.18.0.5 -container-port 5601 -use-listen-fd
+root        9126  0.0  0.0 1670804 3480 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 5601 -container-ip 172.18.0.5 -container-port 5601 -use-listen-fd
+ubuntu      9155  2.3  4.1 1180560 340564 ?      Sl   14:13   1:32 /usr/share/kibana/bin/../node/bin/node /usr/share/kibana/bin/../src/cli/dist --ops.cGroupOverrides.cpuPath=/ --ops.cGroupOverrides.cpuAcctPath=/ --elasticsearch.hosts=http://elasticsearch:9200
+root        9162  0.0  0.0 1671060 3476 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5000 -container-ip 172.18.0.6 -container-port 5000 -use-listen-fd
+root        9187  0.0  0.0 1597268 3360 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 5000 -container-ip 172.18.0.6 -container-port 5000 -use-listen-fd
+root        9223  0.0  0.0 1597268 3360 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto udp -host-ip 0.0.0.0 -host-port 5000 -container-ip 172.18.0.6 -container-port 5000 -use-listen-fd
+root        9228  0.0  0.0 1597268 3480 ?        Sl   14:13   0:00 /usr/bin/docker-proxy -proto udp -host-ip :: -host-port 5000 -container-ip 172.18.0.6 -container-port 5000 -use-listen-fd
+root        9317  0.0  0.1 1233504 9068 ?        Sl   14:13   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 412e9965a0fe6ed4fed9b7b668a5fff7736558a0481e1f1e4c6f87a473eb1401 -address /run/containerd/containerd.sock
+root        9364  0.0  0.0   4380   948 ?        Ss   14:13   0:00 tail -f /dev/null
+root        9539  0.5  0.5 348172 40636 ?        Sl   14:13   0:22 /usr/local/bin/python /app/app.py
+ubuntu     10850  0.0  0.0 103656  6852 ?        Sl   14:13   0:00 /usr/share/elasticsearch/modules/x-pack-ml/platform/linux-aarch64/bin/controller
+root       11249  0.0  0.0      0     0 ?        I    14:58   0:00 [kworker/u4:2-events_unbound]
+root       11427  0.0  0.0      0     0 ?        I    15:03   0:00 [kworker/1:0-cgwb_release]
+root       11429  0.0  0.0      0     0 ?        I    15:03   0:00 [kworker/u4:3-flush-8:0]
+root       11734  0.0  0.0      0     0 ?        I    15:10   0:00 [kworker/u4:0-events_power_efficient]
+root       11792  0.0  0.0      0     0 ?        I    15:14   0:00 [kworker/1:2-cgroup_free]
+root       11857  0.0  0.0      0     0 ?        I    15:15   0:00 [kworker/0:1-events]
+root       12198  0.0  0.0      0     0 ?        Z    15:16   0:00 [sh] <defunct>
+root       12436  0.0  0.0      0     0 ?        I    15:17   0:00 [kworker/1:3-events]
+root       12796  0.0  0.1  18292  9568 ?        Ss   15:20   0:00 sshd: ubuntu [priv]
+ubuntu     12852  0.0  0.0  18584  6620 ?        S    15:20   0:00 sshd: ubuntu@pts/0
+ubuntu     12853  0.0  0.0   8664  4748 pts/0    Ss   15:20   0:00 -bash
+ubuntu     12863  0.0  0.0   7408  3296 pts/0    S+   15:20   0:00 bash ./scripts/collect_evidence.sh
+root       12880  0.0  0.0  15036  3796 ?        Ss   15:20   0:00 /lib/systemd/systemd-timedated
+root       12902  0.0  0.0  22552  3564 ?        S    15:20   0:00 /lib/systemd/systemd-udevd
+ubuntu     12967  0.0  0.0  10020  2808 pts/0    R+   15:20   0:00 ps auxww --sort=start_time

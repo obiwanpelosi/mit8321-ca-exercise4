@@ -1,0 +1,22 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:25Z | By: Feyi Abioye | Host: securebank-lab
+# Source: securebank-app container
+# Command: docker exec securebank-app ls -la /app /app/evidence
+
+/app:
+total 32
+drwxrwxr-x 4 1000 1000 4096 Nov  1 13:13 .
+drwxr-xr-x 1 root root 4096 Nov  1 13:13 ..
+-rw-rw-r-- 1 1000 1000  446 Nov  1 12:56 Dockerfile
+-rw-rw-r-- 1 1000 1000 3811 Nov  1 12:56 app.py
+-rw-rw-r-- 1 1000 1000  768 Nov  1 12:56 db_init.sql
+drwxrwxr-x 3 1000 1000 4096 Nov  1 14:17 evidence
+-rw-rw-r-- 1 1000 1000   43 Nov  1 12:56 requirements.txt
+drwxrwxr-x 2 1000 1000 4096 Nov  1 12:56 templates
+
+/app/evidence:
+total 20
+drwxrwxr-x 3 1000 1000 4096 Nov  1 14:17 .
+drwxrwxr-x 4 1000 1000 4096 Nov  1 13:13 ..
+-rw-r--r-- 1 root root   98 Nov  1 14:17 attack_timeline.txt
+drwxrwxr-x 2 1000 1000 4096 Nov  1 12:56 logs
+-rw-r--r-- 1 root root 3861 Nov  1 14:17 securebank.log

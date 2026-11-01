@@ -1,0 +1,23 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:22Z | By: Feyi Abioye | Host: securebank-lab
+# Source: VM host
+# Command: sudo ss -tulpan
+
+Netid State  Recv-Q Send-Q        Local Address:Port   Peer Address:Port Process                                                 
+udp   UNCONN 0      0             127.0.0.53%lo:53          0.0.0.0:*     users:(("systemd-resolve",pid=584,fd=13))              
+udp   UNCONN 0      0      192.168.252.3%enp0s1:68          0.0.0.0:*     users:(("systemd-network",pid=582,fd=15))              
+udp   UNCONN 0      0                   0.0.0.0:5000        0.0.0.0:*     users:(("docker-proxy",pid=9223,fd=7))                 
+udp   UNCONN 0      0                      [::]:5000           [::]:*     users:(("docker-proxy",pid=9228,fd=7))                 
+tcp   LISTEN 0      4096                0.0.0.0:8080        0.0.0.0:*     users:(("docker-proxy",pid=8946,fd=7))                 
+tcp   LISTEN 0      4096          127.0.0.53%lo:53          0.0.0.0:*     users:(("systemd-resolve",pid=584,fd=14))              
+tcp   LISTEN 0      4096                0.0.0.0:5601        0.0.0.0:*     users:(("docker-proxy",pid=9120,fd=7))                 
+tcp   LISTEN 0      4096              127.0.0.1:40471       0.0.0.0:*     users:(("containerd",pid=2587,fd=15))                  
+tcp   LISTEN 0      128                 0.0.0.0:22          0.0.0.0:*     users:(("sshd",pid=821,fd=3))                          
+tcp   LISTEN 0      4096                0.0.0.0:9200        0.0.0.0:*     users:(("docker-proxy",pid=8908,fd=7))                 
+tcp   LISTEN 0      4096                0.0.0.0:5000        0.0.0.0:*     users:(("docker-proxy",pid=9162,fd=7))                 
+tcp   ESTAB  0      0             192.168.252.3:22    192.168.252.1:56582 users:(("sshd",pid=1249,fd=4),("sshd",pid=944,fd=4))   
+tcp   ESTAB  0      0             192.168.252.3:22    192.168.252.1:63170 users:(("sshd",pid=12852,fd=4),("sshd",pid=12796,fd=4))
+tcp   LISTEN 0      4096                   [::]:8080           [::]:*     users:(("docker-proxy",pid=8952,fd=7))                 
+tcp   LISTEN 0      4096                   [::]:5601           [::]:*     users:(("docker-proxy",pid=9126,fd=7))                 
+tcp   LISTEN 0      128                    [::]:22             [::]:*     users:(("sshd",pid=821,fd=4))                          
+tcp   LISTEN 0      4096                   [::]:9200           [::]:*     users:(("docker-proxy",pid=8914,fd=7))                 
+tcp   LISTEN 0      4096                   [::]:5000           [::]:*     users:(("docker-proxy",pid=9187,fd=7))                 

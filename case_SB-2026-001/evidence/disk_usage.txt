@@ -1,0 +1,17 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:26Z | By: Feyi Abioye | Host: securebank-lab
+# Source: VM host
+# Command: bash -c df -h; echo; docker system df
+
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           793M  1.7M  792M   1% /run
+/dev/sda1        39G  9.1G   30G  24% /
+tmpfs           3.9G     0  3.9G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15       98M  6.3M   92M   7% /boot/efi
+tmpfs           793M  4.0K  793M   1% /run/user/1000
+
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          6         6         7.207GB   7.207GB (100%)
+Containers      6         6         74.06MB   0B (0%)
+Local Volumes   2         2         249.2MB   0B (0%)
+Build Cache     23        0         1.679GB   73.73kB

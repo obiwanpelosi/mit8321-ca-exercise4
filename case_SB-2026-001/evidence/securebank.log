@@ -1,0 +1,45 @@
+2026-11-01 13:13:45,130 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2026-11-01 13:13:45,130 - INFO - [33mPress CTRL+C to quit[0m
+2026-11-01 13:13:45,131 - INFO -  * Restarting with stat
+2026-11-01 13:13:45,384 - WARNING -  * Debugger is active!
+2026-11-01 13:13:45,392 - INFO -  * Debugger PIN: 609-350-231
+2026-11-01 13:14:20,394 - INFO - 172.18.0.1 - - [01/Nov/2026 13:14:20] "GET / HTTP/1.1" 200 -
+2026-11-01 14:05:36,342 - INFO - 172.18.0.1 - - [01/Nov/2026 14:05:36] "GET / HTTP/1.1" 200 -
+2026-11-01 14:12:20,622 - INFO - 172.18.0.1 - - [01/Nov/2026 14:12:20] "GET / HTTP/1.1" 200 -
+2026-11-01 14:16:09,993 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:09] "GET / HTTP/1.1" 200 -
+2026-11-01 14:16:32,538 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:32] "GET / HTTP/1.1" 200 -
+2026-11-01 14:16:44,200 - INFO - LOGIN_ATTEMPT username=jane ip=172.18.0.1
+2026-11-01 14:16:44,231 - WARNING - LOGIN_FAILED username=jane
+2026-11-01 14:16:44,232 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:44] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:16:46,271 - INFO - LOGIN_ATTEMPT username=jane ip=172.18.0.1
+2026-11-01 14:16:46,283 - WARNING - LOGIN_FAILED username=jane
+2026-11-01 14:16:46,284 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:46] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:16:48,314 - INFO - LOGIN_ATTEMPT username=jane ip=172.18.0.1
+2026-11-01 14:16:48,328 - WARNING - LOGIN_FAILED username=jane
+2026-11-01 14:16:48,328 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:48] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:16:50,359 - INFO - LOGIN_ATTEMPT username=jane ip=172.18.0.1
+2026-11-01 14:16:50,375 - INFO - LOGIN_SUCCESS username=jane
+2026-11-01 14:16:50,376 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:50] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:16:56,164 - INFO - LOGIN_ATTEMPT username=john ip=172.18.0.1
+2026-11-01 14:16:56,173 - INFO - LOGIN_SUCCESS username=john
+2026-11-01 14:16:56,174 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:56] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:16:58,226 - INFO - ACCOUNT_VIEW user=john account_id=1
+2026-11-01 14:16:58,230 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:58] "GET /accounts HTTP/1.1" 200 -
+2026-11-01 14:16:58,238 - INFO - ACCOUNT_VIEW user=john account_id=1
+2026-11-01 14:16:58,239 - INFO - 172.18.0.1 - - [01/Nov/2026 14:16:58] "GET /accounts HTTP/1.1" 200 -
+2026-11-01 14:17:28,351 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "GET / HTTP/1.0" 200 -
+2026-11-01 14:17:28,408 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "GET / HTTP/1.0" 200 -
+2026-11-01 14:17:28,409 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "[33mPOST /sdk HTTP/1.1[0m" 404 -
+2026-11-01 14:17:28,410 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "[33mGET /nmaplowercheck1793542648 HTTP/1.1[0m" 404 -
+2026-11-01 14:17:28,412 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "[33mGET /HNAP1 HTTP/1.1[0m" 404 -
+2026-11-01 14:17:28,412 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "[33mGET /evox/about HTTP/1.1[0m" 404 -
+2026-11-01 14:17:28,414 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "GET / HTTP/1.0" 200 -
+2026-11-01 14:17:28,415 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "GET / HTTP/1.1" 200 -
+2026-11-01 14:17:28,480 - INFO - LOGIN_ATTEMPT username=admin' OR '1'='1 ip=172.18.0.7
+2026-11-01 14:17:28,491 - INFO - LOGIN_SUCCESS username=admin' OR '1'='1
+2026-11-01 14:17:28,492 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "POST /login HTTP/1.1" 200 -
+2026-11-01 14:17:28,499 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "[32mGET /accounts?id=1;whoami HTTP/1.1[0m" 302 -
+2026-11-01 14:17:28,505 - INFO - 172.18.0.7 - - [01/Nov/2026 14:17:28] "GET /search?q=<script>alert('XSS')</script> HTTP/1.1" 200 -

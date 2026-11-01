@@ -1,0 +1,41 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:25Z | By: Feyi Abioye | Host: securebank-lab
+# Source: VM host
+# Command: bash -c find '/home/ubuntu/secure-cyber-fortress' -path '*/.git' -prune -o -printf '%M %u:%g %8s %TY-%Tm-%Td %TH:%TM %p\n'
+
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:58 /home/ubuntu/secure-cyber-fortress
+-rwxrwxr-x ubuntu:ubuntu     3644 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/setup.sh
+-rwxrwxr-x ubuntu:ubuntu      656 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/cleanup.sh
+-rw-rw-r-- ubuntu:ubuntu     2266 2026-11-01 13:58 /home/ubuntu/secure-cyber-fortress/docker-compose.yml
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/elk-stack
+-rw-rw-r-- ubuntu:ubuntu      981 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/elk-stack/logstash.conf
+-rw-rw-r-- ubuntu:ubuntu      497 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/README.md
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 14:13 /home/ubuntu/secure-cyber-fortress/vulnerable-app
+-rw-rw-r-- ubuntu:ubuntu     3811 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/app.py
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/templates
+-rw-rw-r-- ubuntu:ubuntu     1455 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/templates/index.html
+-rw-rw-r-- ubuntu:ubuntu     1484 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/templates/accounts.html
+-rw-rw-r-- ubuntu:ubuntu       43 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/requirements.txt
+-rw-rw-r-- ubuntu:ubuntu      446 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/Dockerfile
+drwxr-xr-x root:root     4096 2026-11-01 14:13 /home/ubuntu/secure-cyber-fortress/vulnerable-app/evidence
+-rw-rw-r-- ubuntu:ubuntu      768 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/vulnerable-app/db_init.sql
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 15:17 /home/ubuntu/secure-cyber-fortress/evidence
+-rw-r--r-- root:root       98 2026-11-01 15:17 /home/ubuntu/secure-cyber-fortress/evidence/attack_timeline.txt
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/evidence/logs
+-rw-r--r-- root:root     3861 2026-11-01 15:17 /home/ubuntu/secure-cyber-fortress/evidence/securebank.log
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/logs
+-rw-rw-r-- ubuntu:ubuntu     2756 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/logs/securebank.log
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/kali-tools
+-rw-rw-r-- ubuntu:ubuntu      708 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/kali-tools/Dockerfile
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/kali-tools/scripts
+-rwxrwxr-x ubuntu:ubuntu      937 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/kali-tools/scripts/forensics.sh
+-rwxrwxr-x ubuntu:ubuntu     1183 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/kali-tools/scripts/attack.sh
+drwxrwxr-x ubuntu:ubuntu     4096 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo
+-rw-rw-r-- ubuntu:ubuntu      283 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/network_connections.txt
+-rw-rw-r-- ubuntu:ubuntu      444 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/hashes.txt
+-rw-rw-r-- ubuntu:ubuntu       98 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/attack_timeline.txt
+-rw-rw-r-- ubuntu:ubuntu      148 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/suid_binaries.txt
+-rw-rw-r-- ubuntu:ubuntu      177 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/log_files.txt
+-rw-rw-r-- ubuntu:ubuntu      281 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/disk_usage.txt
+-rw-rw-r-- ubuntu:ubuntu        0 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/running_processes.txt
+-rw-rw-r-- ubuntu:ubuntu        0 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/network_interfaces.txt
+-rw-rw-r-- ubuntu:ubuntu     4102 2026-11-01 13:56 /home/ubuntu/secure-cyber-fortress/sample_evidence_from_repo/securebank.log

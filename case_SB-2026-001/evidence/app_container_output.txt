@@ -1,0 +1,6 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:23Z | By: Feyi Abioye | Host: securebank-lab
+# Source: securebank-app container
+# Command: docker logs --timestamps securebank-app
+
+2026-11-01T13:13:45.066922893Z  * Serving Flask app 'app'
+2026-11-01T13:13:45.068818738Z  * Debug mode: on

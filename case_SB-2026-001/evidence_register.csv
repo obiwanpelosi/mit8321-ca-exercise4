@@ -1,0 +1,25 @@
+Evidence_ID,File,Description,Source,Collected_by,Collected_UTC,Size_bytes,SHA256
+EV-01,system_info.txt,"System time, host and Docker version","VM host",Feyi Abioye,2026-11-01T14:20:22Z,836,00c5c93a7ab987fbe8f1773ab24a70bad61c28e50ca4550387625fa170132319
+EV-02,network_connections.txt,"Listening ports and active connections on the VM","VM host",Feyi Abioye,2026-11-01T14:20:22Z,2611,9ffee65f606106221fefe25806b4bdbe978dacba974917e2aa73e32d03dd3310
+EV-03,app_network_connections.txt,"Listening ports and connections inside the app container","securebank-app container",Feyi Abioye,2026-11-01T14:20:23Z,643,3bda63cd8405654d22876ffb3b51a33cf5a559b5053b797eec7c9a1a5deaa495
+EV-04,network_interfaces.txt,"Network interfaces and IP addresses on the VM","VM host",Feyi Abioye,2026-11-01T14:20:23Z,3473,28a77515da7d01a73c1fbccf233a6faac9005e3fec13939899946d769f416a2c
+EV-05,container_network.txt,"Docker lab network with each container IP","Docker engine",Feyi Abioye,2026-11-01T14:20:23Z,3853,f9b2d2121559b12cce0bd7fe2ba08bcbc82e867127e0deafdc738b434d06ab9c
+EV-06,running_processes.txt,"All running processes on the VM","VM host",Feyi Abioye,2026-11-01T14:20:23Z,18597,4f891728d1b433f3749a313eb6e140014b7752060d482562987de414d6f1913f
+EV-07,container_processes.txt,"Processes running inside each lab container","Docker engine",Feyi Abioye,2026-11-01T14:20:23Z,7921,e52d486a4524b9260434b1f54e29596f3b079fc255348b2e56fee7ecf1358d1b
+EV-08,lab_containers.txt,"Lab containers, images, status and published ports","Docker engine",Feyi Abioye,2026-11-01T14:20:23Z,1024,b5fd013dba810580a586a530664e46bce2a24f2699bcfc3aadc5e3ffd641e398
+EV-09,securebank.log,"SecureBank application security log","/home/ubuntu/secure-cyber-fortress/evidence/securebank.log",Feyi Abioye,2026-11-01T14:20:23Z,3861,81f65a7107e2450688508ebacc83405ab2193e840dbe62c94080ef41469d34cc
+EV-10,app_container_output.txt,"App container console output with Docker timestamps","securebank-app container",Feyi Abioye,2026-11-01T14:20:23Z,289,75684c8ca72df4a800cf7234292e1ed098709518e994baf0fe363485b55c9faf
+EV-11,attack_timeline.txt,"Attack timeline written by the lab attack script","/home/ubuntu/secure-cyber-fortress/evidence/attack_timeline.txt",Feyi Abioye,2026-11-01T14:20:23Z,98,fc7dd97f0a6cbbc7f179a0d3bd1ad5b18c3b69313863e2fc0cd5cc4d649f5ff6
+EV-12,log_files.txt,"Log files present on the VM file system","VM host",Feyi Abioye,2026-11-01T14:20:23Z,9107,5ef73ce91b2eac001a4264f40b11b754d737f8e17836f4343aa90c8071466d10
+EV-13,file_permissions.txt,"Permissions and owners of every lab file","VM host",Feyi Abioye,2026-11-01T14:20:25Z,4383,fb511514bfc887df3f5b37a75b826326bcbc460b329ddb3ee3bba809b5dcdb10
+EV-14,app_file_permissions.txt,"Permissions of application files inside the container","securebank-app container",Feyi Abioye,2026-11-01T14:20:25Z,884,d5fbd373dc91c3a35e47a49d1474892f40732cdcea3b853ec3195084d5c83251
+EV-15,suid_binaries.txt,"SUID binaries on the VM","VM host",Feyi Abioye,2026-11-01T14:20:25Z,4744,14963132ccda3105d9d06072b8877767e6188a176931d56c9a8f1e13ef1a22aa
+EV-16,app_suid_binaries.txt,"SUID binaries inside the app container","securebank-app container",Feyi Abioye,2026-11-01T14:20:25Z,701,99afeb07518e8e04f1c28786e4a813ec3a24e52eba3a3438e2d326deec9f1562
+EV-17,disk_usage.txt,"Disk usage of the VM and Docker","VM host",Feyi Abioye,2026-11-01T14:20:26Z,773,b501dfab989dab718adc12dc796c5285462f541f244522cfc8f1c7a22108fe26
+EV-18,config_references.txt,"Lab version, local changes, and config lines with debug mode, secrets or credentials","Lab repository",Feyi Abioye,2026-11-01T14:20:26Z,2001,80b49b357b009d4fa468c83d3a668f361dedd7d6fb6602c5bd21b0d886cb2984
+EV-19,docker_inspect_app.json,"Full Docker configuration of the app container","Docker engine",Feyi Abioye,2026-11-01T14:20:26Z,9744,53497c843e95e39e02ce603260ef1277e52678d2605b6afe804c551b99f11d86
+EV-20,config/docker-compose.yml,"Lab Docker Compose file","/home/ubuntu/secure-cyber-fortress/docker-compose.yml",Feyi Abioye,2026-11-01T14:20:26Z,2266,f673311b9b756d9c3f860526a83ea2df8abc1d1f1d7af93e1878f6a5f1547981
+EV-21,config/app.py,"Application source code","/home/ubuntu/secure-cyber-fortress/vulnerable-app/app.py",Feyi Abioye,2026-11-01T14:20:26Z,3811,1b2cbe4f5d9b1772b661c4c8a669db53920d4524b4eca4d00ede7b2a239c6f60
+EV-22,config/db_init.sql,"Database initialisation script","/home/ubuntu/secure-cyber-fortress/vulnerable-app/db_init.sql",Feyi Abioye,2026-11-01T14:20:26Z,768,4d0699b88feb825e2277b3f16bcb06e788e95ebfe2a0d4214a308763f3a409bd
+EV-23,config/app.Dockerfile,"App container build file","/home/ubuntu/secure-cyber-fortress/vulnerable-app/Dockerfile",Feyi Abioye,2026-11-01T14:20:26Z,446,c903a0f396d9a4ebdb7f6a7158a87a0f16c47c7444b4be892e63914aa35aae90
+EV-24,config/logstash.conf,"Logstash pipeline configuration","/home/ubuntu/secure-cyber-fortress/elk-stack/logstash.conf",Feyi Abioye,2026-11-01T14:20:26Z,981,7b176c5df474816f8ba5944bc5b02e85ac64c6dc958146774e47acb279efe667

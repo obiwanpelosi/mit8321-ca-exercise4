@@ -1,0 +1,29 @@
+2026-11-01T14:20:22Z | Feyi Abioye | === Collection started for case SB-2026-001 on securebank-lab ===
+2026-11-01T14:20:22Z | Feyi Abioye | COLLECT system_info.txt <= bash -c date -u; echo; hostname; uname -a; echo; uptime; echo; timedatectl 2>/dev/null; echo; docker version --format "Docker server {{.Server.Version}}"
+2026-11-01T14:20:22Z | Feyi Abioye | COLLECT network_connections.txt <= sudo ss -tulpan
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT app_network_connections.txt <= docker exec securebank-app netstat -tulpan
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT network_interfaces.txt <= ip addr show
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT container_network.txt <= bash -c docker network inspect $(docker network ls -q --filter name=securebank-net)
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT running_processes.txt <= ps auxww --sort=start_time
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT container_processes.txt <= bash -c for c in $(docker ps --format "{{.Names}}"); do echo "=== $c ==="; docker top "$c"; echo; done
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT lab_containers.txt <= docker ps -a --format table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}
+2026-11-01T14:20:23Z | Feyi Abioye | COPY securebank.log <= /home/ubuntu/secure-cyber-fortress/evidence/securebank.log
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT app_container_output.txt <= docker logs --timestamps securebank-app
+2026-11-01T14:20:23Z | Feyi Abioye | COPY attack_timeline.txt <= /home/ubuntu/secure-cyber-fortress/evidence/attack_timeline.txt
+2026-11-01T14:20:23Z | Feyi Abioye | COLLECT log_files.txt <= bash -c sudo find / -xdev -type f -name '*.log' -printf '%TY-%Tm-%Td %TH:%TM  %10s bytes  %p\n' 2>/dev/null | sort
+2026-11-01T14:20:25Z | Feyi Abioye | COLLECT file_permissions.txt <= bash -c find '/home/ubuntu/secure-cyber-fortress' -path '*/.git' -prune -o -printf '%M %u:%g %8s %TY-%Tm-%Td %TH:%TM %p\n'
+2026-11-01T14:20:25Z | Feyi Abioye | COLLECT app_file_permissions.txt <= docker exec securebank-app ls -la /app /app/evidence
+2026-11-01T14:20:25Z | Feyi Abioye | COLLECT suid_binaries.txt <= bash -c sudo find / -xdev -perm -4000 -type f -exec ls -l {} + 2>/dev/null
+2026-11-01T14:20:25Z | Feyi Abioye | COLLECT app_suid_binaries.txt <= docker exec securebank-app sh -c find / -xdev -perm -4000 -type f -exec ls -l {} + 2>/dev/null
+2026-11-01T14:20:26Z | Feyi Abioye | COLLECT disk_usage.txt <= bash -c df -h; echo; docker system df
+2026-11-01T14:20:26Z | Feyi Abioye | COLLECT config_references.txt <= bash -c cd '/home/ubuntu/secure-cyber-fortress' && git log -1 --format='Commit %H (%ci)' && echo && git status --short && git diff -- docker-compose.yml vulnerable-app && echo && grep -nE 'debug=True|secret_key|PASSWORD|password' docker-compose.yml vulnerable-app/app.py vulnerable-app/db_init.sql
+2026-11-01T14:20:26Z | Feyi Abioye | COLLECT docker_inspect_app.json <= docker inspect securebank-app
+2026-11-01T14:20:26Z | Feyi Abioye | COPY config/docker-compose.yml <= /home/ubuntu/secure-cyber-fortress/docker-compose.yml
+2026-11-01T14:20:26Z | Feyi Abioye | COPY config/app.py <= /home/ubuntu/secure-cyber-fortress/vulnerable-app/app.py
+2026-11-01T14:20:26Z | Feyi Abioye | COPY config/db_init.sql <= /home/ubuntu/secure-cyber-fortress/vulnerable-app/db_init.sql
+2026-11-01T14:20:26Z | Feyi Abioye | COPY config/app.Dockerfile <= /home/ubuntu/secure-cyber-fortress/vulnerable-app/Dockerfile
+2026-11-01T14:20:26Z | Feyi Abioye | COPY config/logstash.conf <= /home/ubuntu/secure-cyber-fortress/elk-stack/logstash.conf
+2026-11-01T14:20:26Z | Feyi Abioye | Hashing all evidence files (SHA-256 and MD5)
+2026-11-01T14:20:26Z | Feyi Abioye | Evidence register written: 24 items
+2026-11-01T14:20:26Z | Feyi Abioye | Evidence sealed read-only. Archive SHA-256: 8cc882af5a645e59bf74df40592f8c0ad4eaa84d7c114f5a0f7e4e229a1a72a5
+2026-11-01T14:20:26Z | Feyi Abioye | === Collection finished: 24 items. Case folder: /home/ubuntu/case_SB-2026-001 ===

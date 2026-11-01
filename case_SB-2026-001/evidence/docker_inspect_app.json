@@ -1,0 +1,265 @@
+# Case: SB-2026-001 | Collected: 2026-11-01T14:20:26Z | By: Feyi Abioye | Host: securebank-lab
+# Source: Docker engine
+# Command: docker inspect securebank-app
+
+[
+    {
+        "Id": "cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c",
+        "Created": "2026-11-01T13:13:43.59927624Z",
+        "Path": "python",
+        "Args": [
+            "app.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 8823,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-11-01T13:13:44.454533718Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:0a8b41209f4d14e104a16a0d86a8f3e2ccc5f458fe1a9ecf88e66f6295ab79ca",
+        "ResolvConfPath": "/var/lib/docker/containers/cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c/hostname",
+        "HostsPath": "/var/lib/docker/containers/cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c/hosts",
+        "LogPath": "/var/lib/docker/containers/cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c/cbc4843f139fa58d52471cc2a2a6449c989f92987402c92438c09624ebceee2c-json.log",
+        "Name": "/securebank-app",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/ubuntu/secure-cyber-fortress/vulnerable-app:/app:rw",
+                "/home/ubuntu/secure-cyber-fortress/evidence:/app/evidence:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "secure-cyber-fortress_securebank-net",
+            "PortBindings": {
+                "5000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/ubuntu/secure-cyber-fortress/vulnerable-app",
+                "Destination": "/app",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/home/ubuntu/secure-cyber-fortress/evidence",
+                "Destination": "/app/evidence",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "cbc4843f139f",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "5000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "FLASK_ENV=development",
+                "MYSQL_HOST=mysql",
+                "MYSQL_USER=admin",
+                "MYSQL_PASSWORD=password",
+                "MYSQL_DB=securebank",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568",
+                "PYTHON_VERSION=3.9.25",
+                "PYTHON_SHA256=00e07d7c0f2f0cc002432d1ee84d2a40dae404a99303e3f97701c10966c91834"
+            ],
+            "Cmd": [
+                "python",
+                "app.py"
+            ],
+            "Image": "secure-cyber-fortress-vulnerable-app",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "c225448571323e495e6c8d0c680ef1be55bc4f581efdc74cad9546bff15394bd",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:0a8b41209f4d14e104a16a0d86a8f3e2ccc5f458fe1a9ecf88e66f6295ab79ca",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "secure-cyber-fortress",
+                "com.docker.compose.project.config_files": "/home/ubuntu/secure-cyber-fortress/docker-compose.yml",
+                "com.docker.compose.project.working_dir": "/home/ubuntu/secure-cyber-fortress",
+                "com.docker.compose.service": "vulnerable-app",
+                "com.docker.compose.version": "2.40.3"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "927df33ea9d259ae17cd40a5a91afced85a30b1ee33444dbdc3073b921cc4e4f",
+            "SandboxKey": "/var/run/docker/netns/927df33ea9d2",
+            "Ports": {
+                "5000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8080"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8080"
+                    }
+                ]
+            },
+            "Networks": {
+                "secure-cyber-fortress_securebank-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "securebank-app",
+                        "vulnerable-app"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "16312836fd4cc1807abe97e5263976356d0b1e05bdc36394a02824226ca76b73",
+                    "EndpointID": "82a808e3200301df7ebb2f2c7e843f5cf125f17bee3e0af3800dab567bac8b9a",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.2",
+                    "MacAddress": "1a:13:3f:d0:7e:16",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "securebank-app",
+                        "vulnerable-app",
+                        "cbc4843f139f"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:09cb0153b9168c5e43b694bea361e7ff2b0782ab0f19025efac7843c04e00eb0",
+            "size": 2192,
+            "platform": {
+                "architecture": "arm64",
+                "os": "linux"
+            }
+        }
+    }
+]
